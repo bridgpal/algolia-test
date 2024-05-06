@@ -45,13 +45,13 @@ export default function Home() {
             <span className="text-lg font-semibold">Algolia Test</span>
           </Link>
           <nav className="hidden md:flex items-center gap-4">
-            <Link
+            {/* <Link
               className="hover:underline flex items-center gap-2"
               href="https://github.com/bridgpal/algolia-test"
             >
               <GithubIcon className="h-5 w-5" />
               Github
-            </Link>
+            </Link> */}
           </nav>
         </div>
       </header>
