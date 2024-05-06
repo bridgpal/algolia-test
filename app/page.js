@@ -11,7 +11,8 @@ import {
   SearchBox,
   Hits,
   RefinementList,
-  useConnector,
+  Stats,
+  SortBy,
 } from "react-instantsearch";
 
 const searchClient = algoliasearch(
@@ -42,16 +43,18 @@ export default function Home() {
       <header className="bg-gray-900 text-white py-4 px-4 md:px-6">
         <div className="max-w-5xl mx-auto flex items-center justify-between">
           <Link className="flex items-center gap-2" href="#">
-            <span className="text-lg font-semibold">Algolia Test</span>
+            <span className="text-lg font-semibold">
+              Algolia Airport Search
+            </span>
           </Link>
           <nav className="hidden md:flex items-center gap-4">
-            {/* <Link
+            <Link
               className="hover:underline flex items-center gap-2"
               href="https://github.com/bridgpal/algolia-test"
             >
               <GithubIcon className="h-5 w-5" />
               Github
-            </Link> */}
+            </Link>
           </nav>
         </div>
       </header>
@@ -71,10 +74,12 @@ export default function Home() {
                 submitIcon:
                   "absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 dark:text-gray-400",
                 resetIcon: "hidden",
-                placeholder: "Search for Airports...",
+                placeHolder: "Search for Airports...",
               }}
             />
+
             <Hits hitComponent={HitComponent} className="ais-Hits-list" />
+            <Stats />
           </InstantSearch>
         </div>
       </div>
