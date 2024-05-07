@@ -33,7 +33,6 @@ To run this application locally, follow these steps:
    ```bash
    ALGOLIA_APP_ID=XXXXXXXXXXXXX
    ALGOLIA_SEARCH_KEY=abcdyz12346567
-   cd your-repo-name
    ```
 
 3. Run
