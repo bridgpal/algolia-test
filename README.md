@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.JS + Algolia Airport Search Application
 
-## Getting Started
+This Next.JS application uses Algolia's search capabilities to provide a fast and relevant search experience using a dataset of airports. The frontend leverages the `shadcn` UI library and is deployed on Netlify.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.JS Framework:** Utilizes the latest features of Next.JS for server-side rendering and static site generation.
+- **Algolia Search:** This projecet utilizes Algolia Instant Search React library for searching and filter.
+- **Responsive UI:** Built with `shadcn` for a responsive and modern user interface.
+- **Deployed on Netlify:** Hosted on Netlify for quick loading times and high availability.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Prerequisites
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Before you begin, ensure you have the following installed:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [Node.js](https://nodejs.org/) (version 14.x or later)
+- [Netlify CLI](https://docs.netlify.com/cli/get-started/): `npm install netlify-cli -g`
 
-## Learn More
+## Local Development
 
-To learn more about Next.js, take a look at the following resources:
+To run this application locally, follow these steps:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   git clone https://github.com/bridgpal/algolia-test
+   cd your-repo-name
+   npm install
+   ```
 
-## Deploy on Vercel
+2. Sent ENV Variables for
+   ```bash
+   ALGOLIA_APP_ID=XXXXXXXXXXXXX
+   ALGOLIA_SEARCH_KEY=abcdyz12346567
+   cd your-repo-name
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+````
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+`
+1. Run
+   ```bash
+   ntl dev
+````
