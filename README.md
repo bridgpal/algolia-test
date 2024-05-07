@@ -13,7 +13,7 @@ This Next.JS application uses Algolia's search capabilities to provide a fast an
 
 Before you begin, ensure you have the following installed:
 
-- [Node.js](https://nodejs.org/) (version 14.x or later)
+- [Node.js](https://nodejs.org/) (version 20.x or later)
 - [Netlify CLI](https://docs.netlify.com/cli/get-started/): `npm install netlify-cli -g`
 
 ## Local Development
