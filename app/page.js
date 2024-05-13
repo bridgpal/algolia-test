@@ -40,47 +40,56 @@ function HitComponent({ hit }) {
 export default function Home() {
   return (
     <>
-      <header className="bg-gray-900 text-white py-4 px-4 md:px-6">
-        <div className="max-w-5xl mx-auto flex items-center justify-between">
-          <Link className="flex items-center gap-2" href="#">
-            <span className="text-lg font-semibold">
-              Algolia Airport Search
-            </span>
-          </Link>
-          <nav className="hidden md:flex items-center gap-4">
-            <Link
-              className="hover:underline flex items-center gap-2"
-              href="https://github.com/bridgpal/algolia-test"
-            >
-              <GithubIcon className="h-5 w-5" />
-              Github
+      <div className="h-dvh w-full">
+        <header className="bg-gray-900 text-white py-4 px-4 md:px-6">
+          <div className="max-w-5xl mx-auto flex items-center justify-between">
+            <Link className="flex items-center gap-2" href="#">
+              <span className="text-lg font-semibold">
+                Algolia Airport Search
+              </span>
             </Link>
-          </nav>
-        </div>
-      </header>
-      <div className="bg-gray-100 dark:bg-gray-950 py-8 px-4 md:px-6">
-        <div className="max-w-5xl mx-auto">
-          <InstantSearch
-            indexName="dev_airports"
-            searchClient={searchClient}
-            insights
-          >
-            <SearchBox
-              classNames={{
-                root: "flex items-center mb-6",
-                form: "relative flex-1",
-                input:
-                  "w-full bg-white dark:bg-gray-900 pl-12 pr-4 py-3 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400",
-                submitIcon:
-                  "absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 dark:text-gray-400",
-                resetIcon: "hidden",
-                placeHolder: "Search for Airports...",
-              }}
-            />
-
-            <Hits hitComponent={HitComponent} className="ais-Hits-list" />
-            <Stats />
-          </InstantSearch>
+            <nav className="hidden md:flex items-center gap-4">
+              <Link
+                className="hover:underline flex items-center gap-2"
+                href="https://github.com/bridgpal/algolia-test"
+              >
+                <GithubIcon className="h-5 w-5" />
+                Github
+              </Link>
+            </nav>
+          </div>
+        </header>
+        <div className=" dark:bg-gray-950 py-8 px-4 md:px-6">
+          <div className="max-w-5xl mx-auto ">
+            <InstantSearch
+              indexName="dev_airports"
+              searchClient={searchClient}
+              insights
+            >
+              <SearchBox
+                classNames={{
+                  root: "flex items-center mb-6",
+                  form: "relative flex-1",
+                  input:
+                    "w-full bg-white dark:bg-gray-900 pl-12 pr-4 py-3 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400",
+                  submitIcon:
+                    "absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 dark:text-gray-400",
+                  resetIcon: "hidden",
+                  placeHolder: "Search for Airports...",
+                }}
+              />
+              <div className=" flex w-full inline-block align-top bg-orange-50 ">
+                <div className="w-1/2 overflow-x-auto  bg-blue-500 h-svh">
+                  <Hits
+                    hitComponent={HitComponent}
+                    className="ais-Hits-list overflow-x-auto   "
+                  />
+                  <Stats />
+                </div>
+                <div className="w-1/2  inline-block">testing</div>
+              </div>
+            </InstantSearch>
+          </div>
         </div>
       </div>
     </>
